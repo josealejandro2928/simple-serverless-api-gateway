@@ -1,0 +1,22 @@
+{
+  "name": "pets-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "start": "NODE_ENV=local sls offline start",
+    "migrate-local": "NODE_ENV=local sls invoke local --function migrate --data \"up\"",
+    "deploy-dev": "sh ./prepare-layer.sh && NODE_ENV=dev sls deploy",
+    "migrate-dev": "NODE_ENV=dev sls invoke --function migrate --data \"up\"",
+    "test": "jest --detectOpenHandles",
+    "package": "sh ./prepare-layer.sh &&  NODE_ENV=dev sls package"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "jest": "^27.0.5",
+    "serverless-offline": "^7.0.0"
+  }
+}

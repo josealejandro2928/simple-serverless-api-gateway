@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "ajv": "^6.12.6",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.4"
+  }
+}
