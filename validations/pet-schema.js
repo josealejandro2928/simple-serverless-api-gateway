@@ -5,14 +5,15 @@ module.exports = {
   properties: {
     name: {
       type: 'string',
-      title: 'Name is required to create a new Pet',
+      errorMessage: "'name must be a string value'",
     },
     age: {
       type: 'integer',
-      title: 'Age is required to create a new Pet',
+      errorMessage: "'age must be an integer value'",
     },
     typeAnimal: {
       type: 'string',
+      errorMessage: "'typeAnimal must be an string value'",
     },
     BreedId: {
       type: 'integer',
@@ -31,4 +32,12 @@ module.exports = {
     },
   },
   required: ['name', 'age', 'typeAnimal', 'price'],
+  errorMessage: {
+    required: {
+      name: "'name' is a property required",
+      age: "'age' is a property required",
+      typeAnimal: "'typeAnimal' is a property required",
+      price: "'price' is a property required",
+    },
+  },
 };

@@ -4,11 +4,16 @@ const {
   extractHttpMetaFromEvent,
 } = require('../../helpers/utils');
 
-const Ajv = require('ajv');
-const ajv = Ajv({ allErrors: true });
+////VALIDATOR OF SCHEMA///
+const Ajv = require('ajv').default;
+const ajv = new Ajv({ allErrors: true });
+require('ajv-errors')(ajv);
+///////////////////////////
+
+//////SCHEMA AND DTO///////////
 const petSchema = require('../../validations/pet-schema');
 const { mapToDto, PetDto } = require('../../dtos/dtos');
-
+//////////////////////
 module.exports.create = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false;
 

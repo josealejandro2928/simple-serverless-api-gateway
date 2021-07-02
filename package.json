@@ -15,8 +15,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "ajv": "^8.6.0",
+    "ajv-errors": "^3.0.0",
     "eslint": "^7.29.0",
     "jest": "^27.0.5",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.4",
     "serverless-offline": "^7.0.0"
   }
 }
