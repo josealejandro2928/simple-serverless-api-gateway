@@ -31,3 +31,4 @@ NODE_ENV=dev sls invoke --function migrate --data "down"
 ```
 
 # Description
+This api implements a basic crud for pets, its needs the configurations parametters for connecting with your Relational Database.
