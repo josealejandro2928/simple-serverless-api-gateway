@@ -1,17 +1,33 @@
+# Getting started
 ## run serverless project offline
 
 ``` javaScript
-sls offline start
+npm start
 ```
-## run sequelize migrations
+## run sequelize migrations offline
 
+migration up
+``` javaScript
+npm run miagrate-local
+```
+migration down
+``` javaScript
+NODE_ENV=local sls invoke local --function migrate --data "down"
+```
+## deploy api gateway serverless 
 
 ``` javaScript
-sls invoke local --function migrate --data "up"
+npm run deploy-dev
 ```
-## run sequelize migrations undo
+## run sequelize migrations on deployed api gateway
 
+migration up
 ``` javaScript
-sls invoke local --function migrate --data "down"
+npm run miagrate-dev
 ```
-If you want to run the migration in the deployment remove the local parameter
+migration down
+``` javaScript
+NODE_ENV=dev sls invoke --function migrate --data "down"
+```
+
+# Description
